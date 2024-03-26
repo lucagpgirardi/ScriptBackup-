@@ -6,7 +6,7 @@ def create_backup(source_file, backup_dir):
     # Create backup directory if it doesn't exist
     if not os.path.exists(backup_dir):
         os.makedirs(backup_dir)
-
+    
     # Get current date
     now = datetime.now()
     date_folder = now.strftime("%Y.%m.%d")
@@ -22,10 +22,7 @@ def create_backup(source_file, backup_dir):
     shutil.copy(source_file, backup_path)
 
 if __name__ == "__main__":
-    # Replace 'source_file_path' with the path to your source file
-    source_file_path = r"C:\Users\lucag\OneDrive\Área de Trabalho\2024.1\Data Mining\ACOMPANHAMENTO FIDC.xlsx"
-    
-    # Replace 'backup_directory' with the path to the directory where you want to store backups
-    backup_directory = r"C:\Users\lucag\OneDrive\Área de Trabalho\2024.1\Data Mining\backups"
+    source_file_path = r"C:\Users\luca.girardi\SUGOI CONSTRUTORA S.A\Financeiro - Contas a Pagar\04 - FIDCS\ACOMPANHAMENTO FIDC.xlsx"
+    backup_directory = r"C:\Users\luca.girardi\SUGOI CONSTRUTORA S.A\Financeiro - Contas a Pagar\04 - FIDCS\BACKUP SEMANAL FIDC"
     
     create_backup(source_file_path, backup_directory)
